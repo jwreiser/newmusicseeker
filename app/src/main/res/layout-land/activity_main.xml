@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageButton
+        android:id="@+id/loadArtist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:tooltipText="Load Artist"
+        app:layout_constraintBottom_toBottomOf="@+id/dislikeSong"
+        app:layout_constraintEnd_toStartOf="@+id/moreSongs"
+        app:layout_constraintTop_toTopOf="@+id/dislikeSong"
+        app:srcCompat="@drawable/musician_icon" />
+
+    <ImageButton
+        android:id="@+id/likeArtist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="16dp"
+        android:tooltipText="Like Artist"
+        app:layout_constraintBottom_toTopOf="@id/likeSong"
+        app:layout_constraintEnd_toStartOf="@+id/dislikeArtist"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cover"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/like_musician_icon" />
+
+    <ImageButton
+        android:id="@+id/dislikeArtist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:tooltipText="Dislike Artist"
+        app:layout_constraintBottom_toBottomOf="@+id/likeArtist"
+        app:layout_constraintEnd_toStartOf="@+id/likeAlbum"
+        app:layout_constraintTop_toTopOf="@+id/likeArtist"
+        app:srcCompat="@drawable/dislike_musician" />
+
+    <ImageButton
+        android:id="@+id/likeAlbum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:tooltipText="Like Album"
+        app:layout_constraintBottom_toBottomOf="@+id/dislikeArtist"
+        app:layout_constraintEnd_toStartOf="@+id/loadAlbum"
+        app:layout_constraintTop_toTopOf="@+id/dislikeArtist"
+        app:srcCompat="@drawable/like_album" />
+
+    <ImageButton
+        android:id="@+id/loadAlbum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:tooltipText="Load Album"
+        app:layout_constraintBottom_toBottomOf="@+id/likeAlbum"
+        app:layout_constraintEnd_toStartOf="@+id/likeSong"
+        app:layout_constraintTop_toTopOf="@+id/likeAlbum"
+        app:srcCompat="@drawable/load_album" />
+
+    <ImageButton
+        android:id="@+id/likeSong"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:tooltipText="Like Song"
+        app:layout_constraintBottom_toBottomOf="@id/loadAlbum"
+        app:layout_constraintEnd_toStartOf="@+id/dislikeSong"
+        app:layout_constraintTop_toTopOf="@id/loadAlbum"
+        app:srcCompat="@drawable/like_song" />
+
+    <ImageButton
+        android:id="@+id/dislikeSong"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:tooltipText="Disike Song"
+        app:layout_constraintBottom_toBottomOf="@+id/likeSong"
+        app:layout_constraintEnd_toStartOf="@+id/loadArtist"
+        app:layout_constraintTop_toTopOf="@+id/likeSong"
+        app:srcCompat="@drawable/dislike_song" />
+
+    <ImageButton
+        android:id="@+id/basisArtists"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:tooltipText="Basis: Artists"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/likeArtist"
+        app:layout_constraintStart_toStartOf="@+id/likeArtist"
+        app:layout_constraintTop_toBottomOf="@+id/likeArtist"
+        app:srcCompat="@drawable/artists" />
+
+    <ImageButton
+        android:id="@+id/moreSongs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:tooltipText="Load Songs"
+        app:layout_constraintBottom_toBottomOf="@+id/loadArtist"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/loadArtist"
+        app:srcCompat="@drawable/more_songs" />
+
+    <ImageButton
+        android:id="@+id/basisSongs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:tooltipText="Basis: Songs"
+        app:layout_constraintBottom_toBottomOf="@+id/basisArtists"
+        app:layout_constraintEnd_toEndOf="@+id/dislikeArtist"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/likeArtist"
+        app:layout_constraintTop_toTopOf="@+id/basisArtists"
+        app:srcCompat="@drawable/basis_songs" />
+
+    <ImageButton
+        android:id="@+id/basisAudioFeatures"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:tooltipText="Basis: Audio Features"
+        app:layout_constraintBottom_toBottomOf="@+id/basisSongs"
+        app:layout_constraintEnd_toEndOf="@+id/likeAlbum"
+        app:layout_constraintStart_toStartOf="@+id/likeAlbum"
+        app:layout_constraintTop_toTopOf="@+id/basisSongs"
+        app:srcCompat="@drawable/audio_features" />
+
+    <ImageButton
+        android:id="@+id/loadPlaylist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:tooltipText="Load Playlist"
+        app:layout_constraintBottom_toBottomOf="@+id/basisAudioFeatures"
+        app:layout_constraintEnd_toEndOf="@+id/loadAlbum"
+        app:layout_constraintStart_toStartOf="@+id/loadAlbum"
+        app:layout_constraintTop_toTopOf="@+id/basisAudioFeatures"
+        app:srcCompat="@drawable/playlist" />
+
+    <ImageButton
+        android:id="@+id/comedy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:tooltipText="Recent Comedy"
+        app:layout_constraintBottom_toBottomOf="@+id/loadPlaylist"
+        app:layout_constraintEnd_toEndOf="@+id/likeSong"
+        app:layout_constraintStart_toStartOf="@+id/likeSong"
+        app:layout_constraintTop_toTopOf="@+id/loadPlaylist"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/comedian" />
+
+    <ImageButton
+        android:id="@+id/previous"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:tooltipText="Previous"
+        app:layout_constraintBottom_toBottomOf="@+id/comedy"
+        app:layout_constraintEnd_toEndOf="@+id/dislikeSong"
+        app:layout_constraintHorizontal_bias="0.523"
+        app:layout_constraintStart_toStartOf="@+id/dislikeSong"
+        app:layout_constraintTop_toTopOf="@+id/comedy"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/prev" />
+
+    <ImageButton
+        android:id="@+id/pause_play"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:tooltipText="Pause"
+        app:layout_constraintBottom_toBottomOf="@+id/previous"
+        app:layout_constraintEnd_toEndOf="@+id/loadArtist"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/loadArtist"
+        app:layout_constraintTop_toTopOf="@+id/previous"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/mute" />
+
+    <ImageButton
+        android:id="@+id/next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:tooltipText="Next"
+        app:layout_constraintBottom_toBottomOf="@+id/pause_play"
+        app:layout_constraintEnd_toEndOf="@+id/moreSongs"
+        app:layout_constraintHorizontal_bias="0.523"
+        app:layout_constraintStart_toStartOf="@+id/moreSongs"
+        app:layout_constraintTop_toTopOf="@+id/pause_play"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/next" />
+
+    <ImageView
+        android:id="@+id/cover"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:maxHeight="150sp"
+        app:layout_constraintEnd_toStartOf="@id/artist"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/example_cover" />
+
+    <TextView
+        android:id="@+id/artist"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Artist: "
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/cover"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/album"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Album: "
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/cover"
+        app:layout_constraintTop_toBottomOf="@+id/artist" />
+
+    <TextView
+        android:id="@+id/track"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:text="Track: "
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/cover"
+        app:layout_constraintTop_toBottomOf="@+id/album" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
